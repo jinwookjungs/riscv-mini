@@ -6,7 +6,7 @@ gen_dir    = $(base_dir)/generated-src
 out_dir    = $(base_dir)/outputs
 nproc      = $(shell nproc --ignore 1)
 
-SBT       = sbt
+SBT       = sbt --batch -Dsbt.server.forcestart=true
 SBT_FLAGS = -ivy $(base_dir)/.ivy2
 
 sbt:
